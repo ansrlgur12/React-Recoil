@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRecoilValue } from 'recoil';
-import { inputContents } from '../utils/Rc';
+import { inputContents } from '../utils/Recoil';
 
 const InputContents = () => {
 

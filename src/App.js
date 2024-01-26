@@ -6,13 +6,20 @@ import {
   selector,
   useRecoilState,
   useRecoilValue,
-} from 'recoil';
+} from "recoil";
+import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import TodoList from "./pages/Todo";
 
 function App() {
   return (
-   <RecoilRoot>
-      <MainPage />
-   </RecoilRoot>
+    <RecoilRoot>
+      <Router>
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/todo" element={<TodoList />}></Route>
+        </Routes>
+      </Router>
+    </RecoilRoot>
   );
 }
 
